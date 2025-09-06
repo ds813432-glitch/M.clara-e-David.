@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M.clara & David 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #ffe6eb, #fff);
+      color: #333;
+      text-align: center;
+    }
+    header {
+      padding: 2rem;
+      background: #ff99aa;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    #contador {
+      font-size: 1.5rem;
+      margin: 2rem 0;
+      color: #b30047;
+    }
+    .texto-romantico {
+      max-width: 800px;
+      margin: auto;
+      padding: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .foto {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+    }
+    .foto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .frase {
+      margin-top: 0.8rem;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>M.clara ❤️ David</h1>
+    <p>Nosso contador de amor desde 02/04/2025</p>
+  </header>
+
+  <section id="contador"></section>
+
+  <section class="texto-romantico">
+    <p>
+      Amor da minha vida, cada segundo ao seu lado é um presente que o tempo me deu.<br><br>
+      Desde o instante em que escolhemos caminhar juntos, os dias se tornaram mais leves, as horas mais doces e os minutos cheios de sentido.<br><br>
+      Nosso amor não se mede apenas em palavras, mas em todos os instantes que compartilhamos, nos risos, nos abraços, nos sonhos e até nos silêncios que se entendem.<br><br>
+      Hoje te entrego esse contador, que guarda cada batida de tempo desde que começamos nossa história. Ele não é apenas números, é a prova de que o amor verdadeiro cresce em cada detalhe, em cada segundo vivido ao seu lado.<br><br>
+      Se o tempo é infinito, que o nosso amor também seja.<br>
+      <b>Eu te amo para sempre, M.clara. — David</b>
+    </p>
+  </section>
+
+  <section class="galeria">
+    <div class="foto">
+      <img src="IMG-20250830-WA0071(1).jpg" alt="Foto 1">
+      <p class="frase">Amor é quando até os momentos simples se tornam eternos.</p>
+    </div>
+    <div class="foto">
+      <img src="IMG-20250830-WA0252.jpg" alt="Foto 2">
+      <p class="frase">O nosso ‘sim’ foi o início da mais linda história da minha vida.</p>
+    </div>
+    <div class="foto">
+      <img src="IMG-20250830-WA0089.jpg" alt="Foto 3">
+      <p class="frase">Entre todas as paisagens, a mais bonita é te ter nos meus braços.</p>
+    </div>
+    <div class="foto">
+      <img src="IMG-20250830-WA0081.jpg" alt="Foto 4">
+      <p class="frase">No seu olhar eu encontro paz, no seu abraço eu encontro o mundo.</p>
+    </div>
+    <div class="foto">
+      <img src="IMG-20250830-WA0056.jpg" alt="Foto 5">
+      <p class="frase">O pôr do sol é bonito, mas nada se compara ao brilho do nosso amor.</p>
+    </div>
+  </section>
+
+  <script>
+    function atualizarContador() {
+      const inicio = new Date("2025-04-02T00:00:00");
+      const agora = new Date();
+      const diff = agora - inicio;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("contador").innerHTML = `
+        <h2>Já se passaram:</h2>
+        <p><b>${dias}</b> dias, <b>${horas}</b> horas, <b>${minutos}</b> minutos e <b>${segundos}</b> segundos juntos 💕</p>
+      `;
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+  </script>
+</body>
+</html>
